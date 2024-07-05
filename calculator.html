@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles-calculator.css">
+    </head>
+
+    <body>
+        <div class="whole">
+            <h3>Calculator</h3>
+
+            <div class="js-cal cal"></div>
+
+            <div>
+                <button class="extra" onclick="
+                    cal = eval(eval(cal)/100);
+                    showCal(cal);
+                    ">%</button>
+                <button class="extra" onclick="
+                    newCal('(');
+                    ">&lpar;</button>
+                <button class="extra" onclick="
+                    newCal(')');
+                    ">&rpar;</button>
+                
+                <button class="operator" onclick="
+                    cal = cal.slice(0,cal.length-1);
+                    showCal(cal);
+                    ">C</button>
+            </div>
+    
+            <div>
+                <button class="number" onclick="
+                    newCal('1');
+                    ">1</button>
+                <button class="number" onclick="
+                    newCal('2');
+                    ">2</button>
+                <button class="number" onclick="
+                    newCal('3');
+                    ">3</button>
+                <button class="operator" onclick="
+                    newCal('+');
+                    ">+</button>
+            </div>
+    
+            <div>
+                <button class="number" onclick="
+                    newCal('4');
+                    ">4</button>
+                <button class="number" onclick="
+                    newCal('5');
+                    ">5</button>
+                <button class="number" onclick="
+                    newCal('6');
+                    ">6</button>
+                <button class="operator" onclick="
+                    newCal('-');
+                    ">-</button>
+            </div>
+    
+            <div>
+                <button class="number" onclick="
+                    newCal('7');
+                    ">7</button>
+                <button class="number" onclick="
+                    newCal('8');
+                    ">8</button>
+                <button class="number" onclick="
+                    newCal('9');
+                    ">9</button>
+                <button class="operator" onclick="
+                   newCal('*');
+                    ">*</button>
+            </div>
+    
+            <div>
+                <button class="number" onclick="
+                    newCal('0');
+                    ">0</button>
+                <button class="number" onclick="
+                    newCal('.');
+                    ">.</button>
+                <button class="number" onclick="
+                    cal = eval(cal);
+                    showCal(cal);
+                    ">=</button>
+                <button class="operator" onclick="
+                    newCal('/');
+                    ">/</button>
+            </div>
+    
+            <div class="clear">
+                <button class="number" onclick="
+                    cal = '';
+                    localStorage.removeItem('calculation');
+                    showCal(cal);
+                    ">
+                    <p>AC</p>
+                </button>
+
+            </div>
+                
+        </div>
+       
+  
+        <script src="javascript-calculator.js"></script>
+        
+    </body>
+</html>
+

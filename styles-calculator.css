@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 45px;
+}
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.number,.operator,.extra{
+    background-color: rgb(60, 60, 60);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.operator{
+    background-color: rgb(251, 170, 20);
+}
+.extra{
+    background-color: rgba(173, 173, 173, 0.888);
+    color: black;
+}
+div{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.whole{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clear{
+    width: 270px; 
+}
+.cal{
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+    color: red;
+    margin: 10px;
+    margin-top: 10px;
+}
+button:hover{
+    opacity: 0.8;
+}
